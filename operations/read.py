@@ -17,3 +17,15 @@ def read_user():
 
                 if not users:
                     print("\n Nenhum usuário encontrado na tabela '{TABLE_NAME}', cadastre um novo usuário.")
+
+                print("\n" + "=" * 77)
+                print("--- LISTA DE USUÁRIOS ---")
+                print(f"{'CPF':<15} | {'Nome':<30} | {'Email':<30}")
+                print("=" * 77)
+
+                for cpf, nome, email in usuarios:
+                    print(f"{cpf:<15} | {nome:<30} | {email:<30}")
+                print("=" * 77 + "\n")
+            
+            except Error as e:
+                print(f"\n Erro ao ler usuários: {e}")

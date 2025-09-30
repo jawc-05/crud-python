@@ -1,3 +1,11 @@
-# operations/delete.py
+from mysql.connector import Error
+from connection import db_manager
+from settings import TABLE_NAME
+
+
 def delete_user():
-    print("⚠️ DELETE: Função em desenvolvimento. Tente as opções 0, 1 ou 2.")
+
+    print("\n--- DELETAR USUÁRIO ---")
+
+    cpf = input("Digite o CPF do usuário que deseja DELETAR: ")
+    

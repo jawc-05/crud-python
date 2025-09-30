@@ -1,0 +1,8 @@
+USE crud_python;
+
+--AQUI OS DADOS DE EXEMPLO SERÃO INSERIDOS NA TABELA USUARIOS
+INSERT INTO usuarios (cpf, nome, email) VALUES
+('11111111111', 'João Alfredo', 'joao@teste.com'),
+('22222222222', 'Regis Rodolfo', 'regis@teste.com')
+ON DUPLICATE KEY UPDATE nome=nome; 
+-- ON DUPLICATE KEY UPDATE É PARA GARANTIR QUE NÃO HAVERÁ DADOS DUPLICADOS

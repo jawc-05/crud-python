@@ -1,4 +1,5 @@
 from getpass import getpass
+from settings import DB_NAME
 from mysql.connector import connect, Error
 
 def create_connection(action):

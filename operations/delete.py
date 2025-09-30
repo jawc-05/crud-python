@@ -8,4 +8,6 @@ def delete_user():
     print("\n--- DELETAR USUÁRIO ---")
 
     cpf = input("Digite o CPF do usuário que deseja DELETAR: ")
-    
+
+    query = f"DELETE FROM {TABLE_NAME} WHERE CPF = %s"
+    data=(cpf,)

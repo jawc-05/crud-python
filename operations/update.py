@@ -40,5 +40,17 @@ def update_user():
     with connection:
         with connection.cursor() as cursor:
             try:
-                cursor.execute(query, data)
+                cursor.execute(query, tuple((data)))
                 connection.commit()
+
+                if cursor.rowcount > 0:
+                    print(f"\n Usuário de CPF {cpf} atualizado com sucesso! (Campos alterados: {cursor.rowcount})")
+                else:
+                    print(f"\n Nenhum usuário encontrado com o CPF {cpf}. Nada foi atualizado.")
+            
+            except Error as e:
+                #TRATA ERROR COMO TENTAR ATUALIZAR PARA UM EMAIL QUE JÁ EXISTE (1062)
+                if e.errno == 1062:
+                    print("\n Erro: O novo EMAIL digitado já pertence a outro usuário.")
+                else:
+                    print(f"\n Erro ao atualizar usuário: {e}")

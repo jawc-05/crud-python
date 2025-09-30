@@ -56,3 +56,5 @@ class ConnectionManager:
         except Error as e:
             print(f"\n Erro ao conectar ao MySQL Server: {e}")
             return None
+        
+db_manager = ConnectionManager()

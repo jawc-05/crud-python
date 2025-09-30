@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS crud_python;
+USE crud_python;
+CREATE TABLE IF NOT EXISTS usuarios (
+    cpf VARCHAR(14) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);

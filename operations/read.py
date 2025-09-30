@@ -23,7 +23,7 @@ def read_user():
                 print(f"{'CPF':<15} | {'Nome':<30} | {'Email':<30}")
                 print("=" * 77)
 
-                for cpf, nome, email in usuarios:
+                for cpf, nome, email in users:
                     print(f"{cpf:<15} | {nome:<30} | {email:<30}")
                 print("=" * 77 + "\n")
             

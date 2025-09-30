@@ -34,7 +34,7 @@ def update_user():
     WHERE cpf = %s
     """.strip()
 
-    connection = db.manager.create_connection()
+    connection = db_manager.create_connection()
     if not connection: return
 
     with connection:

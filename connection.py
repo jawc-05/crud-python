@@ -1,6 +1,6 @@
 from getpass import getpass
-from settings import DB_NAME
 from mysql.connector import connect, Error
+from settings import DB_NAME
 
 def create_connection(action):
     try:

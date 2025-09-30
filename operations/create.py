@@ -9,7 +9,7 @@ def create_user():
     nome = input("Digite o nome: ")
     email = input("Digite o email: ")
 
-    query = f""""
+    query = f"""
     INSERT INTO {TABLE_NAME} (cpf, nome, email)
     VALUES (%s, %s, %s)
     """

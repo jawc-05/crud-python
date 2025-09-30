@@ -3,4 +3,17 @@ from connection import db_manager
 from settings import TABLE_NAME
 
 def read_user():
-    print("⚠️ UPDATE: Função em desenvolvimento. Tente as opções 0, 1 ou 2.")
+    query = f"SELECT cpf, nome, email FROM {TABLE_NAME}"
+    
+    connection = db_manager.create_connection()
+    if not connection: return
+
+    with connection:
+        with connection.cursor() as cursor:
+            try:
+                cursor.execute(query)
+
+                users = cursor.fetchall()
+
+                if not users:
+                    print("\n Nenhum usuário encontrado na tabela '{TABLE_NAME}', cadastre um novo usuário.")

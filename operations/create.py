@@ -14,3 +14,21 @@ def create_user():
     VALUES (%s, %s, %s)
     """
     data = (cpf, nome, email)
+
+    connection = db_manager.create_connection()
+    if not connection: return
+
+    with connection:
+        with connection.cursor() as cursor:
+            try:
+                #AQUI TERA O INSERT
+                cursor.execute(query, data)
+                connection.commit()
+                print(f"\n Usuário '{nome}'(CPF: {cpf}) cadastrado com sucesso!")
+
+            except Error as e:
+                # TRATA O ERRO DE CHAVE DUPLICADA (CPF OU EMAIL JÁ CADASTRADO) #
+                if e.errno == 1062:
+                    print("\n Erro: CPF ou EMAIL já cadastrado. Tente novamente.")
+                else:
+                    print(f"\n Erro ao criar usuário: {e}")

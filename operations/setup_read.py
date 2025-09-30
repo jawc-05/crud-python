@@ -8,3 +8,25 @@ def setup_database():
     if not connection:
         print("Não foi possível iniciar o setup. Verifique as credenciais e tente novamente.")
         return
+    
+    with connection:
+        try:
+            with connection.cursor() as cursor:
+
+                cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
+                print(f"Banco de dados '{DB_NAME}' verificado/criado.")
+
+                connection.database = DB_NAME
+
+                create_table_query = f"""
+                CREATE TABLE IF NOT EXISTS {TABLE_NAME}(
+                    cpf VARCHAR(14) PRIMARY KEY,
+                    nome VARCHAR(100) NOT NULL,
+                    email VARCHAR(100) UNIQUE NOT NULL
+                )"""
+                cursor.execute(create_table_query)
+                connection.commit()
+                print(f"Table: '{TABLE_NAME}' verificada/criada.")
+
+        except Error as e:
+            print(f"\n Erro na configuração do banco de dados: {e}")

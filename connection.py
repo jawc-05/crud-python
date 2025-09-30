@@ -12,6 +12,17 @@ class ConnectionManager:
         self.password = None
         self.database = DB_NAME
 
+    def get_credentials_if_needed(self):
+        #AQUI PEGAMOS AS CREDENCIAIS DO USUÁRIO#
+
+        if not self.user:
+            # ESSE * 50 SERVE PARA FAZER UMA LINHA DE SEPARAÇÃO#
+            print("\n" + "=" * 50)
+            print("  CONFIGURAÇÃO DE ACESSO AO BANCO DE DADOS")
+            print("=" * 50)
+            self.user = input("Digite o usuário do banco de dados: ")
+            self.password = getpass("Digite a senha do banco de dados: ")
+            print("-" * 50)
 
 
 def create_connection(action):

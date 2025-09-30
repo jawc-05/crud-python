@@ -24,6 +24,22 @@ class ConnectionManager:
             self.password = getpass("Digite a senha do banco de dados: ")
             print("-" * 50)
 
+    def create_connection(self):
+        self.get_credentials_if_needed()
+        db_to_connect= self.database
+
+        try:
+            return connect(
+                host=self.host,
+                user=self.user,
+                password=self.password,
+                database=db_to_connect
+            )
+        except Error as e:
+            print(f"\n Erro ao conectar ao MySQL (DB: {db_to_connect}): {e}")
+            self.password = None 
+            return None
+
 
 def create_connection(action):
     try:

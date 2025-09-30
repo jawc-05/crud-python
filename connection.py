@@ -39,3 +39,20 @@ class ConnectionManager:
             print(f"\n Erro ao conectar ao MySQL (DB: {db_to_connect}): {e}")
             self.password = None 
             return None
+        
+    def connect_only_server(self):
+        self.get_credentials_if_needed()
+        db_to_connect= None
+
+        # Conecta sem especificar o banco de dados, útil para criar o banco se não existir #
+
+        try:
+            return connect(
+                host=self.host,
+                user=self.user,
+                password=self.password,
+                database=db_to_connect 
+            )
+        except Error as e:
+            print(f"\n Erro ao conectar ao MySQL Server: {e}")
+            return None

@@ -6,18 +6,21 @@ def update_user():
     #ESSA FUNÇÃO ATUALIZA OS CAMPOS(email/nome) DE UM USUÁRIO, USANDO O CPF COMO IDENTIFICADOR
     print("\n--- ATUALIZAR USUÁRIO ---")
 
+    #COLETA OS DADOS
     cpf = input("Digite o CPF do usuário que deseja ATUALIZAR: ")
-
     new_name = input("Digite o NOVO nome (ou ENTER para manter): ")
     new_email = input("Digite o NOVO email (ou ENTER para manter): ")
 
+    #QUERY DE FORMA DINAMICA
     updates=[]
     data=[]
 
+    #SÓ ADICIONA NOME SE FOR FORNECIDO UM NOVO NOME
     if new_name.strip():
         updates.append("nome = %s")
         data.append(new_name)
 
+    #SÓ ADICIONA EMAIL SE FOR FORNECIDO UM NOVO EMAIL
     if new_email.strip():
         updates.append("email = %s")
         data.append(new_email)

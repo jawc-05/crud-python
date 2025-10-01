@@ -31,6 +31,7 @@ def update_user():
     
     data.append(cpf)
 
+    #MONTA A QUERY FINAL DE FORMA DINAMICA
     query = f"""
     UPDATE {TABLE_NAME}
     SET {', '.join(updates)}
@@ -43,6 +44,7 @@ def update_user():
     with connection:
         with connection.cursor() as cursor:
             try:
+                #EXECUTA A QUERY
                 cursor.execute(query, tuple((data)))
                 connection.commit()
 

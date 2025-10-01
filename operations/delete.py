@@ -11,3 +11,7 @@ def delete_user():
 
     query = f"DELETE FROM {TABLE_NAME} WHERE CPF = %s"
     data=(cpf,)
+
+    connection = db_manager.create_connection()
+    if not connection: return
+    

@@ -1,6 +1,6 @@
 # Importa as funções de cada módulo de operação
 from operations.setup_read import setup_database
-from operations.read import read_user
+from operations.read import read_users
 from operations.create import create_user
 from operations.update import update_user 
 from operations.delete import delete_user 
@@ -10,7 +10,7 @@ def main():
     
     crud_actions = {
         '1': create_user,
-        '2': read_user,
+        '2': read_users,
         '3': update_user, 
         '4': delete_user, 
     }

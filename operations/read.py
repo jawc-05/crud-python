@@ -2,7 +2,7 @@ from mysql.connector import Error
 from database.connection import db_manager
 from configs.settings import TABLE_NAME
 
-def read_user():
+def read_users():
     #ESSA FUNCAO EXECUTA UM READ DA TABLE INTEIRA(usuarios)
     query = f"SELECT cpf, nome, email FROM {TABLE_NAME}"
     

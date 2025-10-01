@@ -1,6 +1,6 @@
 from mysql.connector import Error
 from connection import db_manager
-from settings import TABLE_NAME
+from configs.settings import TABLE_NAME
 
 def read_user():
     query = f"SELECT cpf, nome, email FROM {TABLE_NAME}"

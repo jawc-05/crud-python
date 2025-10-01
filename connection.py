@@ -1,6 +1,6 @@
 from getpass import getpass
 from mysql.connector import connect, Error
-from settings import DB_NAME
+from configs.settings import DB_NAME
 
 
 class ConnectionManager:

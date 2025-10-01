@@ -1,5 +1,3 @@
-# main.py
-
 # Importa as funções de cada módulo de operação
 from operations.setup_read import setup_database
 from operations.read import read_user
@@ -7,7 +5,7 @@ from operations.create import create_user
 from operations.update import update_user 
 from operations.delete import delete_user 
 
-def main_menu():
+def main():
     """Função principal que gerencia o menu e o fluxo do programa."""
     
     crud_actions = {
@@ -46,4 +44,4 @@ def main_menu():
             print("\nOpção inválida. Tente novamente.")
 
 if __name__ == "__main__":
-    main_menu()
+    main()

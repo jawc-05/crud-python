@@ -29,5 +29,6 @@ def delete_user():
                 else:
                     print(f"\n Nenhum usuário com o CPF: {cpf}. Nada foi DELETADO.")
 
+            #TRATA OS ERROS DO SQL
             except Error as e:
                 print(f"\n Erro ao deletar usuário: {e}")

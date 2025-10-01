@@ -1,4 +1,3 @@
-# Importa as funções de cada módulo de operação
 from operations.setup_read import setup_database
 from operations.read import read_users
 from operations.create import create_user
@@ -7,7 +6,6 @@ from operations.delete import delete_user
 
 def main():
     #FUNÇÃO PRINCIPAL QUE GERENCIA O PROGRAMA
-    
     crud_actions = {
         '1': create_user,
         '2': read_users,

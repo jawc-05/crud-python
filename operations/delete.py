@@ -1,5 +1,5 @@
 from mysql.connector import Error
-from connection import db_manager
+from database.connection import db_manager
 from configs.settings import TABLE_NAME
 
 

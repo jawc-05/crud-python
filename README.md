@@ -57,6 +57,15 @@ python main.py
 
 **Passo Essencial:** Escolha a opção `[0] CONFIGURAR/SETUP` na primeira vez. Isso criará o banco de dados `crud_python` e a tabela `usuarios`.
 
+## 4. (Opcional) Carregar Dados de Teste
+
+Para popular a tabela com dados iniciais e testar as operações CRUD, use o script de seed (carga de dados):
+
+```bash
+# Executa o script de seed manualmente
+mysql -u [SEU_USUARIO] -p crud_python < sql_scripts/seed_data.sql
+```
+
 ## 🔑 Detalhes da Tabela
 
 - **Banco de Dados:** `crud_python`

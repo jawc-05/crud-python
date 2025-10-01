@@ -17,7 +17,7 @@ def main():
 
     while True:
         print("\n" + "=" * 50)
-        print("  SISTEMA CRUD PYTHON (TESTE)")
+        print("  SISTEMA CRUD PYTHON  ")
         print("=" * 50)
         print(" [0] CONFIGURAR/SETUP do Banco de Dados")
         print(" [1] CREATE (Criar Usuário)")

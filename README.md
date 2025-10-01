@@ -17,7 +17,7 @@ O projeto é organizado por pastas, seguindo o princípio da Separação de Preo
 | Pasta         | Responsabilidade                                                        |
 |---------------|------------------------------------------------------------------------|
 | `main.py`     | Interface/Fluxo: Ponto de entrada e Menu Principal.                    |
-| `config/`     | Configurações: Constantes e variáveis globais (`DB_NAME`).             |
+| `configs/`     | Configurações: Constantes e variáveis globais (`DB_NAME`).             |
 | `database/`   | Infraestrutura: Lógica de conexão, credenciais e tratamento de erro.   |
 | `operations/` | Lógica de Negócio: Funções específicas do CRUD (INSERT, SELECT, etc.). |
 | `sql_scripts/`| Documentação: Scripts para setup manual e carga de dados de teste.      |

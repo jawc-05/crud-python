@@ -3,7 +3,8 @@ from database.connection import db_manager
 from configs.settings import TABLE_NAME
 
 def create_user():
-
+    #ESSA FUNÇÃO SERVE PARA CASTRAR OS USUÁRIOS NO BANCO DE DADOS.
+    #ELA FAZ ESSA INTERAÇÃO UTILIZANDO O INSERT
     print("\n ---CADASTRAR NOVO USUÁRIO---")
     cpf = input("Digite o CPF (PK): ")
     nome = input("Digite o nome: ")

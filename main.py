@@ -6,7 +6,7 @@ from operations.update import update_user
 from operations.delete import delete_user 
 
 def main():
-    """Função principal que gerencia o menu e o fluxo do programa."""
+    #FUNÇÃO PRINCIPAL QUE GERENCIA O PROGRAMA
     
     crud_actions = {
         '1': create_user,

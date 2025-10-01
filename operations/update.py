@@ -3,7 +3,7 @@ from database.connection import db_manager
 from configs.settings import TABLE_NAME
 
 def update_user():
-
+    #ESSA FUNÇÃO ATUALIZA OS CAMPOS(email/nome) DE UM USUÁRIO, USANDO O CPF COMO IDENTIFICADOR
     print("\n--- ATUALIZAR USUÁRIO ---")
 
     cpf = input("Digite o CPF do usuário que deseja ATUALIZAR: ")

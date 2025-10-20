@@ -55,7 +55,7 @@ O programa é iniciado pelo `main.py`. Na primeira execução, o sistema pedirá
 python main.py
 ```
 
-**Passo Essencial:** Escolha a opção `[0] CONFIGURAR/SETUP` na primeira vez. Isso criará o banco de dados `crud_python` e a tabela `usuarios`.
+**Passo Essencial:** Escolha a opção `[0] CONFIGURAR/SETUP` na primeira vez! Isso criará o banco de dados `crud_python` e a tabela `usuarios`.
 
 ## 4. (Opcional) Carregar Dados de Teste
 

@@ -1,6 +1,6 @@
 # 🐍 CRUD PYTHON + MYSQL: Projeto Modular em Camadas
 
-## 🚀 Visão Geral do Projeto
+## 🚀 Visão Geral do Projeto 
 
 Este projeto é uma implementação completa das operações CRUD (Create, Read, Update, Delete) usando Python 3 e MySQL. O principal objetivo é demonstrar uma arquitetura de código modular e profissional, onde as responsabilidades são estritamente separadas em camadas.
 
